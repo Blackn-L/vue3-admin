@@ -5,7 +5,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => defineConfig({
-  plugins: [vue(), vitePluginImport([
+  plugins: [
+    vue(),
+    vitePluginImport([
     {
       libraryName: 'element-plus',
       libraryDirectory: 'es',
