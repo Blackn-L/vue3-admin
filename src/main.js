@@ -1,9 +1,27 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { ElButton } from 'element-plus';
-import router from '@/router'
+import { createApp } from "vue";
+import {
+  ElButton,
+  ElContainer,
+  ElAside,
+  ElMenu,
+  ElSubmenu,
+  ElMenuItemGroup,
+  ElMenuItem,
+} from "element-plus";
+import router from "@/router";
+import App from "./App.vue";
 
-import 'element-plus/lib/theme-chalk/index.css';
+import "element-plus/lib/theme-chalk/index.css";
 
-
-createApp(App).use(ElButton).use(router).mount('#app')
+const app = createApp(App);
+const plugins = [
+  ElButton,
+  ElContainer,
+  ElAside,
+  ElMenu,
+  ElSubmenu,
+  ElMenuItemGroup,
+  ElMenuItem,
+];
+plugins.forEach((e) => app.use(e));
+app.use(router).mount("#app");
