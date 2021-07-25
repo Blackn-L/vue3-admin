@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
     <el-container class="container">
+      <!-- 侧边栏 -->
       <el-aside class="aside">
         <div class="head">
           <span>Vue3 Admin</span>
@@ -20,16 +21,22 @@
           </el-submenu>
         </el-menu>
       </el-aside>
+      <!-- 内容区 -->
       <el-container class="content">
+        <Header />
         <div class="main">
           <router-view />
         </div>
+        <Footer />
       </el-container>
     </el-container>
   </div>
 </template>
 
 <script setup>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+name: "App";
 // vue
 // import HelloWorld from "./components/HelloWorld.vue";
 
@@ -77,7 +84,7 @@ body {
 }
 
 .main {
-  height: 100vh;
+  height: cacl(100vh - 100px);
   overflow: auto;
   padding: 10px;
 }

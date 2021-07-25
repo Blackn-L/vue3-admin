@@ -1,23 +1,21 @@
 <template>
-  <div class="header">
-    <div class="left">Left</div>
-    <div class="right">Right</div>
+  <div class="footer">
+    <div class="left">Copyright © 2019-2021 Blackn. All rights reserved.</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header",
+  name: "Footer",
 };
 </script>
 
 <style scoped>
-.header {
+.footer {
   display: flex;
-  height: 50px;
   justify-content: space-around;
   align-items: center;
+  border-top: 1px solid #e9e9e9;
   padding: 0 20px;
-  border-bottom: 1px solid #e9e9e9;
 }
 </style>

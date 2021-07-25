@@ -1,11 +1,64 @@
 <template>
-  <el-button type="primary">
-    button
-  </el-button>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
+  <div><el-button type="primary"> button </el-button></div>
 </template>
 
 <script>
-
 export default {};
 </script>
 
