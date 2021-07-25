@@ -7,6 +7,10 @@ import {
   ElSubmenu,
   ElMenuItemGroup,
   ElMenuItem,
+  ElForm,
+  ElFormItem,
+  ElInput,
+  ElCheckbox,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -22,6 +26,10 @@ const plugins = [
   ElSubmenu,
   ElMenuItemGroup,
   ElMenuItem,
+  ElForm,
+  ElFormItem,
+  ElInput,
+  ElCheckbox,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");
