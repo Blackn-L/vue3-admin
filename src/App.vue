@@ -17,6 +17,9 @@
               <el-menu-item index="/"
                 ><i class="el-icon-data-line" />首页</el-menu-item
               >
+              <el-menu-item index="/add"
+                ><i class="el-icon-data-line" />添加商品</el-menu-item
+              >
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -69,6 +72,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 50px;
+}
+.head span {
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .line {
