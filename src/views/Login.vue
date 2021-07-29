@@ -84,7 +84,7 @@ export default {
           axios
             .post("/adminUser/login", {
               userName: state.ruleForm.username || "",
-              password: md5(state.ruleForm.password),
+              passwordMd5: md5(state.ruleForm.password),
               // 密码用 md5 加密
             })
             .then((res) => {
