@@ -24,9 +24,10 @@
 import Header from "@/components/Header.vue";
 import Sider from "@/components/Sider.vue";
 import Footer from "@/components/Footer.vue";
-
 import { reactive, toRefs } from "vue";
 import { useRouter } from "vue-router";
+
+import { localGet } from "@/utils";
 
 // 不需要菜单等的路径数组
 const noMenu = ["/login"];
@@ -36,8 +37,19 @@ const state = reactive({
 });
 console.log(router);
 // 监听路由的变化
-router.beforeEach((to) => {
+router.beforeEach((to, from, next) => {
   state.showMenu = !noMenu.includes(to.path);
+  if ((to.path = "/login")) {
+    // 如果是去登录页面，正常跳转
+    next();
+  } else {
+    // 其他页面判断是否有 token
+    if (!localGet("token")) {
+      next({ path: "/login" });
+    } else {
+      next();
+    }
+  }
 });
 // vue
 // This starter template is using Vue 3 experimental <script setup> SFCs
