@@ -1,35 +1,34 @@
 <template>
   <div class="header">
-    <div class="left">{{name}}</div>
+    <div class="left">{{ name }}</div>
     <div class="right">Right</div>
   </div>
 </template>
 
 <script>
-import {reactive, toRefs} from 'vue'
-import {useRouter} from 'vue-router'
+import { reactive, toRefs } from "vue";
+import { useRouter } from "vue-router";
+import { pathMap } from "@/utils/index";
 export default {
   name: "Header",
-  setup(){
-  // 获取路由实例
-   const router =  useRouter()
-  // 声明路由和对应键值对
-  const pathMap = {
-    index: '首页',
-    add: '添加商品'
-  }
-  const state = reactive({
-    name: '首页'
-  })
-  // 监听路由变化方法 afterEach
-  router.afterEach((to)=>{
-    const {id} = to.query
-    state.name = pathMap[to.name]
-  })
-  return {
-    ...toRefs(state)
-  }
-  }
+  setup() {
+    // 获取路由实例
+    const router = useRouter();
+
+    const state = reactive({
+      name: "首页",
+    });
+
+    // 监听路由变化方法 afterEach
+    router.afterEach((to) => {
+      const { id } = to.query;
+      // 设置 title 的名字，根据
+      state.name = pathMap[to.name];
+    });
+    return {
+      ...toRefs(state),
+    };
+  },
 };
 </script>
 
