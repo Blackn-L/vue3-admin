@@ -1,14 +1,37 @@
 <template>
   <div class="header">
     <div class="left">{{ name }}</div>
-    <div class="right">Right</div>
+    <div class="right">
+      <el-popover
+        placement="bottom"
+        :width="320"
+        trigger="click"
+        popper-class="popper-user-box"
+      >
+        <template #reference>
+          <div class="author">
+            <i class="icon el-icon-s-custom" />
+            {{ (userInfo && userInfo.nickName) || "" }}
+            <i class="el-icon-caret-bottom" />
+          </div>
+        </template>
+        <div>
+          <p>登录名：{{ (userInfo && userInfo.loginUserName) || "" }}</p>
+          <p>昵称：{{ (userInfo && userInfo.nickName) || "" }}</p>
+          <el-tag size="small" effect="dark" class="logout" @click="logout"
+            >退出</el-tag
+          >
+        </div>
+      </el-popover>
+    </div>
   </div>
 </template>
 
 <script>
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { pathMap } from "@/utils/index";
+import { pathMap, localRemove } from "@/utils/index";
+import axios from "@/utils/axios";
 export default {
   name: "Header",
   setup() {
@@ -16,17 +39,44 @@ export default {
     const router = useRouter();
 
     const state = reactive({
-      name: "首页",
+      name: "Dashboard",
+      userInfo: null,
     });
 
     // 监听路由变化方法 afterEach
     router.afterEach((to) => {
       const { id } = to.query;
-      // 设置 title 的名字，根据
+      // 设置 title 的名字，根据当前路径判断
       state.name = pathMap[to.name];
     });
+
+    onMounted(() => {
+      // 获取当前路径
+      const pathName = window.location.href.split("/")[1] || "";
+      // 如果是登录界面，则不获取个人信息
+      if (!pathName.includes("login")) {
+        getUserInfo();
+      }
+    });
+
+    // 获取用户信息
+    const getUserInfo = async () => {
+      const userInfo = await axios.get("/adminUser/profile");
+      state.userInfo = userInfo;
+    };
+
+    // 退出登录
+    const logout = () => {
+      axios.delete("/logout").then(() => {
+        // 退出后，清理本地 token，跳转登录页
+        localRemove("token");
+        router.push({ path: "/login" });
+      });
+    };
+
     return {
       ...toRefs(state),
+      logout,
     };
   },
 };

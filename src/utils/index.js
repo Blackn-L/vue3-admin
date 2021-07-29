@@ -20,7 +20,7 @@ export function localRemove(key) {
 
 // 声明路由和对应键值对
 export const pathMap = {
-  index: "首页",
+  index: "Dashboard",
   login: "登录",
   add: "添加商品",
 };

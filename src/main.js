@@ -11,6 +11,9 @@ import {
   ElFormItem,
   ElInput,
   ElCheckbox,
+  ElPopover,
+  ElTag,
+  ElCard,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -30,6 +33,9 @@ const plugins = [
   ElFormItem,
   ElInput,
   ElCheckbox,
+  ElPopover,
+  ElTag,
+  ElCard,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");
