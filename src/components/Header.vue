@@ -15,7 +15,7 @@
             <i class="el-icon-caret-bottom" />
           </div>
         </template>
-        <div>
+        <div class="nickname">
           <p>登录名：{{ (userInfo && userInfo.loginUserName) || "" }}</p>
           <p>昵称：{{ (userInfo && userInfo.nickName) || "" }}</p>
           <el-tag size="small" effect="dark" class="logout" @click="logout"
@@ -86,9 +86,35 @@ export default {
 .header {
   display: flex;
   height: 50px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   border-bottom: 1px solid #e9e9e9;
+}
+.right > div > .icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
+.author {
+  margin-left: 10px;
+  cursor: pointer;
+}
+</style>
+<style>
+.popper-user-box {
+  background: url("https://s.yezgea02.com/lingling-h5/static/account-banner-bg.png")
+    50% 50% no-repeat !important;
+  background-size: cover !important;
+  border-radius: 0 !important;
+}
+.popper-user-box .nickname {
+  position: relative;
+  color: #ffffff;
+}
+.popper-user-box .nickname .logout {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
 }
 </style>

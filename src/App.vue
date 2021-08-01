@@ -38,7 +38,7 @@ console.log(router);
 // 监听路由的变化
 router.beforeEach((to, from, next) => {
   state.showMenu = !noMenu.includes(to.path);
-  if ((to.path === "/login")) {
+  if (to.path === "/login") {
     // 如果是去登录页面，正常跳转
     next();
   } else {
