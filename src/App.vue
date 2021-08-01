@@ -46,6 +46,8 @@ router.beforeEach((to, from, next) => {
     // 其他页面判断是否有 token
     if (!localGet("token")) {
       next({ path: "/login" });
+      // 不显示菜单，如果不在这设置，在跳转到 login 时，菜单会显示
+      state.showMenu = false
     } else {
       next();
     }
