@@ -5,18 +5,33 @@
       <span>Vue3 Admin</span>
     </div>
     <div class="line"></div>
-    <el-menu background-color="#222832" text-color="#fff" router>
+    <el-menu
+      background-color="#222832"
+      text-color="#fff"
+      :router="true"
+      :default-openeds="defaultOpen"
+      :default-active="currentPath"
+    >
       <el-submenu index="1">
         <template #title>
-          <i class="el-icon-location"></i>
-          <span>导航一</span>
+          <span>Dashboard</span>
         </template>
         <el-menu-item-group>
           <el-menu-item index="/"
-            ><i class="el-icon-data-line" />首页</el-menu-item
+            ><i class="el-icon-odometer" />首页</el-menu-item
           >
           <el-menu-item index="/add"
-            ><i class="el-icon-data-line" />添加商品</el-menu-item
+            ><i class="el-icon-plus" />添加商品</el-menu-item
+          >
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="2">
+        <template #title>
+          <span>首页配置</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/swiper"
+            ><i class="el-icon-picture" />轮播图配置</el-menu-item
           >
         </el-menu-item-group>
       </el-submenu>
@@ -25,8 +40,19 @@
 </template>
 
 <script>
+import { toRefs, reactive } from "vue";
 export default {
   name: "Sider",
+  setup(props) {
+    const {currentPath} = toRefs(props)
+    const state = reactive({
+      defaultOpen: ["1", "2"],
+    });
+    return {
+      ...toRefs(state),
+      currentPath
+    };
+  },
 };
 </script>
 

@@ -38,7 +38,6 @@ export default {
   name: "Index",
   setup() {
     onMounted(() => {
-      console.log(echarts);
       if (echarts) {
         // 初始化 echarts 实例
         myChart = echarts.init(document.getElementById("zoom"));

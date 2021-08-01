@@ -14,6 +14,10 @@ import {
   ElPopover,
   ElTag,
   ElCard,
+  ElTable,
+  ElUpload,
+  ElDialog,
+  ElPagination,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -36,6 +40,10 @@ const plugins = [
   ElPopover,
   ElTag,
   ElCard,
+  ElTable,
+  ElUpload,
+  ElDialog,
+  ElPagination,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");
