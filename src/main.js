@@ -19,6 +19,7 @@ import {
   ElDialog,
   ElPagination,
   ElLoading,
+  ElTableColumn,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -46,6 +47,7 @@ const plugins = [
   ElDialog,
   ElPagination,
   ElLoading,
+  ElTableColumn,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");

@@ -3,7 +3,6 @@
     <el-table
       :loading="loading"
       :data="tableData"
-      tooltip-effect="dark"
       style="width: 100%"
     >
       <el-table-column type="selection" width="55" /> 
@@ -69,5 +68,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

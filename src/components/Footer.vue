@@ -16,6 +16,6 @@ export default {
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid #e9e9e9;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 </style>

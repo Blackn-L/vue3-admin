@@ -84,7 +84,7 @@ body {
 }
 
 .main {
-  height: cacl(100vh - 100px);
+  height: calc(100vh - 110px);
   overflow: auto;
   padding: 10px;
 }
