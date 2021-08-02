@@ -2,7 +2,7 @@
   <div class="layout">
     <el-container class="container" v-if="state.showMenu">
       <!-- 侧边栏 -->
-      <Sider :current-path="state.currentPath" />
+      <Sider :currentPath="state.currentPath" />
       <!-- 内容区 -->
       <el-container class="content">
         <Header />
@@ -47,7 +47,7 @@ router.beforeEach((to, from, next) => {
     if (!localGet("token")) {
       next({ path: "/login" });
       // 不显示菜单，如果不在这设置，在跳转到 login 时，菜单会显示
-      state.showMenu = false
+      state.showMenu = false;
     } else {
       next();
     }
@@ -55,7 +55,6 @@ router.beforeEach((to, from, next) => {
   // 设置当前高亮侧边栏
   state.currentPath = to.path;
   document.title = pathMap[to.name];
-  console.log("state", state);
 });
 
 // vue

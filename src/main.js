@@ -18,6 +18,7 @@ import {
   ElUpload,
   ElDialog,
   ElPagination,
+  ElLoading,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -44,6 +45,7 @@ const plugins = [
   ElUpload,
   ElDialog,
   ElPagination,
+  ElLoading,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");

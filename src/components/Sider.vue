@@ -40,17 +40,20 @@
 </template>
 
 <script>
-import { toRefs, reactive } from "vue";
+import { toRefs, reactive, toRef } from "vue";
 export default {
   name: "Sider",
+  props: {
+    currentPath: String
+  },
   setup(props) {
-    const {currentPath} = toRefs(props)
+    const { currentPath } = toRefs(props);
     const state = reactive({
       defaultOpen: ["1", "2"],
     });
     return {
       ...toRefs(state),
-      currentPath
+      currentPath,
     };
   },
 };
