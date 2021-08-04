@@ -27,6 +27,21 @@ const router = createRouter({
       name: "swiper",
       component: Swiper,
     },
+    // {
+    //   path: '/hot',
+    //   name: 'hot',
+    //   component: IndexConfig
+    // },
+    // {
+    //   path: '/new',
+    //   name: 'new',
+    //   component: IndexConfig
+    // },
+    // {
+    //   path: '/recommend',
+    //   name: 'recommend',
+    //   component: IndexConfig
+    // },
   ],
 });
 

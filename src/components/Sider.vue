@@ -17,12 +17,12 @@
           <span>Dashboard</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="/"
-            ><i class="el-icon-odometer" />首页</el-menu-item
-          >
-          <el-menu-item index="/add"
-            ><i class="el-icon-plus" />添加商品</el-menu-item
-          >
+          <el-menu-item index="/">
+            <i class="el-icon-odometer" />首页
+          </el-menu-item>
+          <el-menu-item index="/add">
+            <i class="el-icon-plus" />添加商品
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
@@ -30,9 +30,18 @@
           <span>首页配置</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="/swiper"
-            ><i class="el-icon-picture" />轮播图配置</el-menu-item
-          >
+          <el-menu-item index="/swiper">
+            <i class="el-icon-picture" />轮播图配置
+          </el-menu-item>
+          <el-menu-item index="/hot">
+            <i class="el-icon-star-on" />热销商品配置
+          </el-menu-item>
+          <el-menu-item index="/new">
+            <i class="el-icon-sell" />新品上线配置
+          </el-menu-item>
+          <el-menu-item index="/recommend">
+            <i class="el-icon-thumb" />为你推荐配置
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
