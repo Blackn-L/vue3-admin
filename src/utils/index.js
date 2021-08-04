@@ -25,3 +25,6 @@ export const pathMap = {
   add: "添加商品",
   swiper: "轮播图配置"
 };
+
+// 单张图片上传
+export const uploadImgServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/upload/file'

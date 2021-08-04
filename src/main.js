@@ -20,6 +20,8 @@ import {
   ElPagination,
   ElLoading,
   ElTableColumn,
+  ElMessage,
+  ElPopconfirm,
 } from "element-plus";
 import router from "@/router";
 import App from "./App.vue";
@@ -48,6 +50,8 @@ const plugins = [
   ElPagination,
   ElLoading,
   ElTableColumn,
+  ElMessage,
+  ElPopconfirm,
 ];
 plugins.forEach((e) => app.use(e));
 app.use(router).mount("#app");
