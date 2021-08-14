@@ -44,6 +44,16 @@
           </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="3">
+        <template #title>
+          <span>模块管理</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/category"
+            ><i class="el-icon-menu" />分类管理</el-menu-item
+          >
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
   </el-aside>
 </template>
@@ -53,12 +63,12 @@ import { toRefs, reactive, toRef } from "vue";
 export default {
   name: "Sider",
   props: {
-    currentPath: String
+    currentPath: String,
   },
   setup(props) {
     const { currentPath } = toRefs(props);
     const state = reactive({
-      defaultOpen: ["1", "2"],
+      defaultOpen: ["1", "2", "3"],
     });
     return {
       ...toRefs(state),
